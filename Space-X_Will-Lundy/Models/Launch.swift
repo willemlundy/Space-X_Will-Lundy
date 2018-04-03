@@ -11,11 +11,12 @@ import UIKit
 import Kingfisher
 import SwiftyJSON
 
-struct Launch {
+struct Launch: ListCellModelProtocol {
     let rocket_name: String
     let flight_number: Int
     let launch_year: String
     let launch_date_local: String
+    let launch_date_utc: String
     let details: String
     let site_name_long: String
     var imageLink: String
@@ -28,6 +29,7 @@ struct Launch {
         self.flight_number = json["flight_number"].intValue
         self.launch_year = json["launch_year"].stringValue
         self.launch_date_local = json["launch_date_local"].stringValue
+        self.launch_date_utc = json["launch_date_utc"].stringValue
         self.details = json["details"].stringValue
         self.site_name_long = json["launch_site"]["site_name_long"].stringValue
         self.imageLink = json["links"]["mission_patch"].stringValue

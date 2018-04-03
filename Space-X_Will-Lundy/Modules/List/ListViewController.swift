@@ -58,12 +58,13 @@ extension ListViewController: UITableViewDataSource, UITableViewDelegate {
             cell = ListTableViewCell(style: .subtitle, reuseIdentifier: "LaunchItem")
         }
         let launch = viewModel.listModel.launches[indexPath.row]
-        cell.rocketName.text = launch.rocket_name
-        cell.flightNo.text = String(launch.flight_number)
-        cell.flightDate.text = launch.launch_date_local
-        cell.launchSite.text = launch.site_name_long
-        if var url = URL(string: launch.imageLink),
-            let imageView = cell.imageView {
+        let cellViewModel: ListCellViewModelInterface = ListCellViewModel(listCellModel: launch)
+        cell.rocketName.text = cellViewModel.rocketName
+        cell.flightNo.text = cellViewModel.flightNo
+        cell.flightDate.text = cellViewModel.flightDate
+        cell.launchSite.text = cellViewModel.launchSite
+        if let url = URL(string: launch.imageLink),
+            let imageView = cell.launchImage {
             imageView.kf.indicatorType = .activity
             imageView.kf.setImage(with: url, completionHandler: {
                 (image, error, cacheType, imageUrl) in
