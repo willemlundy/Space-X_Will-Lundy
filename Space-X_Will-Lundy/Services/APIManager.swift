@@ -19,10 +19,10 @@ enum LaunchSearchAPI: String {
 
 class APIManager {
     
-    func getLaunchStorage(launchSearch: LaunchSearchAPI, callback: @escaping (_ allLaunches: SpaceXLaunches?, _ error: Error?) -> Void ) {
+    func getLaunchStorage(launchSearch: String, callback: @escaping (_ allLaunches: SpaceXLaunches?, _ error: Error?) -> Void) {
         
         
-        HTTPClient.shared.getJSON(url: launchSearch.rawValue) {
+        HTTPClient.shared.getJSON(url: launchSearch) {
             (json, error) in
             // Do we have an error
             guard error == nil else {
@@ -39,5 +39,6 @@ class APIManager {
         }
         
     }
+    
     
 }
