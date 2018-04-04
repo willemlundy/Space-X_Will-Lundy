@@ -17,8 +17,8 @@ struct Constants {
         static let noLaunchesMessage = "No Space X Launches in "
         static let followFormat = "Both dates must follow YYYY-MM-DD format"
         static let fourDigitMessage = "Please enter a four digit year"
-        static let firstSpaceLaunch = 2007
-        static let furthestSpaceLaunch = 2022
+        static let firstSpaceLaunch = 2006
+        static let furthestSpaceLaunch = 2019
     }
     
     enum List {
