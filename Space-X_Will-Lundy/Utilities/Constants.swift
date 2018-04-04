@@ -9,7 +9,12 @@
 import Foundation
 
 struct Constants {
-    // Enums for namespacing constants.  Given more time I would move all the Strings here
+    // Enums for namespacing constants.  Given more time I would move all the things here
+    
+    enum LaunchCoordinator {
+        static let serviceUnavailable = "Space X Mars server not responding"
+    }
+    
     enum Search {
         static let nibName = "Search"
         static let title = "Launch Search"
@@ -29,11 +34,9 @@ struct Constants {
             static let nibName = "ListTableViewCell"
             static let reuseID = "LaunchItem"
         }
-        
     }
     
     enum Detail {
-        
+        static let nibName = "Detail"
     }
-    
 }

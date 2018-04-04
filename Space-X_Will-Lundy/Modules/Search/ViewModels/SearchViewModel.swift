@@ -45,15 +45,16 @@ class SearchViewModel: SearchViewModelInterface {
     }
     
     func isValidYear(str: String) -> Bool {
-        guard let year = Int(str) else { return false }
-        guard year <= 9999,
-        year >= 1000 else { return false }
+        guard let year = Int(str),
+            year <= 9999,
+            year >= 1000 else { return false }
         return true
     }
     
     func isLaunchYear(str: String) -> Bool {
-        guard let year = Int(str) else { return false }
-        guard year >= Constants.Search.firstSpaceLaunch,
+        guard let year = Int(str),
+            year != 2011,
+            year >= Constants.Search.firstSpaceLaunch,
             year <= Constants.Search.furthestSpaceLaunch else { return false }
         return true
     }

@@ -11,7 +11,7 @@ import UIKit
 import Kingfisher
 import SwiftyJSON
 
-struct Launch: ListCellModelProtocol {
+struct Launch: ListCellModelProtocol, DetailModelProtocol {
     let rocket_name: String
     let flight_number: Int
     let launch_year: String

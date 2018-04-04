@@ -30,6 +30,7 @@ class LaunchCoordinator: Coordinator {
         let searchVC = Configurator.configureSearchModuleXIB(presenter: self, searchModel: allLaunches)
         self.presenter.pushViewController(searchVC, animated: false)
         self.searchViewController = searchVC
+        // given more time I would pre load all the images
     }
     
     func loadLaunches() {
@@ -53,17 +54,9 @@ extension LaunchCoordinator: SearchCoordinatorProtocol {
     
     func searchScreenSearchButtonPressed(year: String, beginDate: String, endDate: String) {
         var searchURL: String = ""
-        guard year != "" || (beginDate != "" && endDate != "")  else {
-            
-            let alert = UIAlertController(title: "Make sure you enter a four digit year.", message: nil, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in }))
-            self.searchViewController?.present(alert, animated: true, completion: nil)
-            return
-        }
-        
-        if year.count == 4 {
+        if year.isEmpty == false {
             searchURL = "https://api.spacexdata.com/v2/launches?launch_year=" + year
-        } else if beginDate  != "" && endDate != "" {
+        } else if beginDate.isEmpty == false && endDate.isEmpty == false {
             searchURL = "https://api.spacexdata.com/v2/launches?start="+beginDate+"&final="+endDate
         } else {
             searchURL = LaunchSearchAPI.AllLaunches.rawValue
@@ -72,11 +65,15 @@ extension LaunchCoordinator: SearchCoordinatorProtocol {
         manager.getLaunchStorage(launchSearch: searchURL) { (launches, error) in
             DispatchQueue.main.async {
                 guard error == nil else {
+                    // If we have errors
+                    Utilities.showAlert(presenter: self.searchViewController!, title: Constants.LaunchCoordinator.serviceUnavailable)
                     print(error!)
                     return
                 }
+                //
                 guard let validLaunches = launches else {
-                    // Both returned as nil, show service unavailable message  I did not have time to implement this
+                    // If we have no launches
+                    Utilities.showAlert(presenter: self.searchViewController!, title: Constants.LaunchCoordinator.serviceUnavailable)
                     return
                 }
                 self.allLaunches = validLaunches
@@ -91,7 +88,9 @@ extension LaunchCoordinator: SearchCoordinatorProtocol {
 
 extension LaunchCoordinator: ListCoordinatorProtocol {
     func launchListDidSelect(_ selectedLaunch: Launch) {
-        
+        let detailVC = Configurator.configureDetailModuleXIB(presenter: self, detailModel: selectedLaunch)
+        self.presenter.pushViewController(detailVC, animated: true)
+        self.detailViewController = detailVC
     }
 }
 

@@ -21,6 +21,7 @@
                 <outlet property="beginDateTextField" destination="mae-6d-raW" id="uwF-rU-kUl"/>
                 <outlet property="endDateLabel" destination="sNK-SO-mh4" id="IVZ-B8-Edy"/>
                 <outlet property="endDateTextField" destination="yho-ti-RSb" id="TUd-Ts-Jja"/>
+                <outlet property="searchButton" destination="hEG-wa-diR" id="vBg-wo-1GP"/>
                 <outlet property="searchYearLabel" destination="R4g-gd-JmL" id="r7m-yf-dxK"/>
                 <outlet property="searchYearTextField" destination="pSI-uq-3x4" id="HSu-qP-brA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="59q-LE-zLZ"/>
@@ -42,7 +43,7 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                     <state key="normal" title="Search">
-                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
                         <action selector="searchButtonPressed:" destination="-1" eventType="touchUpInside" id="dYu-zB-r7u"/>

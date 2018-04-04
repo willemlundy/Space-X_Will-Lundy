@@ -52,7 +52,6 @@ class ListCellViewModel: ListCellViewModelInterface {
         self.flightDate = String(listCellModel.launch_date_utc.prefix(10))
         self.launchSite = ListCellViewModel.getLaunchSite(site: self.listCellModel.site_name_long)
         self.launchImage = self.listCellModel.imageLink
-        
     }
     
     static func getLaunchSite(site: String) -> String {
@@ -71,7 +70,7 @@ class ListCellViewModel: ListCellViewModelInterface {
             if let firstWord = site.components(separatedBy: " ").first {
                 launchSite = firstWord
             } else {
-                launchSite = ""
+                launchSite = "Secret Tesla Moon Base!!!"
             }
         }
         return launchSite

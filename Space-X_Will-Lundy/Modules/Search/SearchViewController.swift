@@ -26,6 +26,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var beginDateTextField: UITextField!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var endDateTextField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
     
     public required init() {
         super.init(nibName: Constants.Search.nibName, bundle: nil)
@@ -50,10 +51,18 @@ class SearchViewController: UIViewController {
     
     func configureAllViews() {
         self.setupNavBar()
+        setupButton()
     }
     
     func setupNavBar() {
         self.title = Constants.Search.title
+    }
+    
+    func setupButton() {
+        searchButton.layer.cornerRadius = 22
+        searchButton.layer.borderWidth = 2
+        searchButton.layer.borderColor = UIColor.orange.cgColor
+        searchButton.titleLabel?.textColor = UIColor.orange
     }
     
     func clearTextFields() {
@@ -96,11 +105,11 @@ class SearchViewController: UIViewController {
         // Messaging and checking on the year and dates
         // Given more time I would have made sure all the edge cases were covered
         // Also, I'm not into the empty string comparison, but I dont have time to do more
-        guard year != "" || (beginDate != "" && endDate != "") else {
+        guard year.isEmpty == false || (beginDate.isEmpty == false && endDate.isEmpty == false) else {
             Utilities.showAlert(presenter: self, title: Constants.Search.fourDigitYearMessage)
             return
         }
-        if beginDate == "" && endDate == "" {
+        if beginDate.isEmpty && endDate.isEmpty {
             
             guard viewModel.isValidYear(str: year) else {
                 Utilities.showAlert(presenter: self, title: Constants.Search.fourDigitMessage)
@@ -114,7 +123,7 @@ class SearchViewController: UIViewController {
                 return
             }
         }
-        if year == ""  {
+        if year.isEmpty  {
             guard viewModel.isValidDate(date: beginDate),
             viewModel.isValidDate(date: endDate) else {
                 Utilities.showAlert(presenter: self, title: Constants.Search.followFormat)
