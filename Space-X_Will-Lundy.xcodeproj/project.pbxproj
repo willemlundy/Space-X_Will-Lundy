@@ -39,6 +39,8 @@
 		89542A9720729DE3006D8120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89542A9620729DE3006D8120 /* Assets.xcassets */; };
 		89542A9A20729DE3006D8120 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89542A9820729DE3006D8120 /* LaunchScreen.storyboard */; };
 		89542AA520729DE3006D8120 /* Space_X_Will_LundyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89542AA420729DE3006D8120 /* Space_X_Will_LundyTests.swift */; };
+		89F261EA2074E47E00F92A37 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F261E92074E47E00F92A37 /* Constants.swift */; };
+		89F261EC2074E4BF00F92A37 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F261EB2074E4BF00F92A37 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		89542AA020729DE3006D8120 /* Space-X_Will-LundyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Space-X_Will-LundyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89542AA420729DE3006D8120 /* Space_X_Will_LundyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space_X_Will_LundyTests.swift; sourceTree = "<group>"; };
 		89542AA620729DE3006D8120 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89F261E92074E47E00F92A37 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		89F261EB2074E4BF00F92A37 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +151,6 @@
 		8914CD842073223300F1930A /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
-				8914CD90207323CF00F1930A /* Configurator.swift */,
 				8914CD852073225000F1930A /* Coordinator.swift */,
 				8914CD872073227600F1930A /* ApplicationCoordinator.swift */,
 				8914CD89207322AB00F1930A /* LaunchCoordinator.swift */,
@@ -294,6 +297,7 @@
 		89542A8E20729DE3006D8120 /* Space-X_Will-Lundy */ = {
 			isa = PBXGroup;
 			children = (
+				89F261E82074E3CF00F92A37 /* Utilities */,
 				8914CD83207321C500F1930A /* Application */,
 				8914CD842073223300F1930A /* Coordinators */,
 				8914CD8B207322CD00F1930A /* Modules */,
@@ -313,6 +317,16 @@
 				89542AA620729DE3006D8120 /* Info.plist */,
 			);
 			path = "Space-X_Will-LundyTests";
+			sourceTree = "<group>";
+		};
+		89F261E82074E3CF00F92A37 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8914CD90207323CF00F1930A /* Configurator.swift */,
+				89F261E92074E47E00F92A37 /* Constants.swift */,
+				89F261EB2074E4BF00F92A37 /* Utilities.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +455,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8914CDB720732AC800F1930A /* APIManager.swift in Sources */,
+				89F261EA2074E47E00F92A37 /* Constants.swift in Sources */,
 				8914CD9F2073269400F1930A /* DetailViewController.swift in Sources */,
 				8914CDBB2073AA8600F1930A /* ListCellViewModel.swift in Sources */,
 				8914CD932073241600F1930A /* SearchViewController.swift in Sources */,
@@ -457,6 +472,7 @@
 				8914CDB520732AA800F1930A /* HTTPClient.swift in Sources */,
 				8914CD91207323CF00F1930A /* Configurator.swift in Sources */,
 				8914CD9A2073265D00F1930A /* ListViewController.swift in Sources */,
+				89F261EC2074E4BF00F92A37 /* Utilities.swift in Sources */,
 				8914CD8A207322AB00F1930A /* LaunchCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

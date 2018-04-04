@@ -10,6 +10,7 @@ import UIKit
 
 class Configurator {
     
+    // This class sets up the modules
     class func configureSearchModuleXIB(presenter: SearchCoordinatorProtocol, searchModel: SearchModelProtocol) -> SearchViewController {
         let searchVC = SearchViewController()
         searchVC.delegateToCoordinator = presenter

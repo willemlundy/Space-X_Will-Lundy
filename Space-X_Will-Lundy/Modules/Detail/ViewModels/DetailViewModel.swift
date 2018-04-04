@@ -17,24 +17,17 @@ protocol DetailViewModelDelegate: class {
 }
 
 protocol DetailViewModelInterface {
-    
     weak var delegateToVC: DetailViewModelDelegate? { get set }
-    
 }
 
 
 class DetailViewModel: DetailViewModelInterface {
     
     weak var delegateToVC: DetailViewModelDelegate?
-    
+
     let detailModel: DetailModelProtocol
-    
-    
     
     init(detailModel: DetailModelProtocol) {
         self.detailModel = detailModel
     }
-    
-    
-    
 }

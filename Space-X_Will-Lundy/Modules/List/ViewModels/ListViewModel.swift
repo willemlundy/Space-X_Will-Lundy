@@ -17,29 +17,23 @@ protocol ListViewModelDelegate: class {
 }
 
 protocol ListViewModelInterface {
-    
     weak var delegateToVC: ListViewModelDelegate? { get set }
     var listModel: ListModelProtocol { get }
     var numberOfItems: Int { get }
 }
 
-
 class ListViewModel: ListViewModelInterface {
-    
+    // Delegates
     weak var delegateToVC: ListViewModelDelegate?
-    
+    // Models
     let listModel: ListModelProtocol
     
     var numberOfItems: Int {
         return listModel.launches.count
     }
     
-    
     init(listModel: ListModelProtocol) {
         self.listModel = listModel
         // self.numberOfItems =
     }
-    
-    
-    
 }

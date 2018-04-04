@@ -13,7 +13,6 @@ struct SpaceXLaunches {
     var launches: [Launch] = []
     
     init() {
-        
     }
     
     init?(json: JSON) {

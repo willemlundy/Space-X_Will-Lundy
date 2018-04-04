@@ -37,14 +37,7 @@ protocol ListCellViewModelInterface {
 class ListCellViewModel: ListCellViewModelInterface {
     
     let listCellModel: ListCellModelProtocol
-    
-//    let displayDateFormatter: DateFormatter = {
-//        let formatter = DateFormatter()
-//        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-//        let localDate = formatter.dateFromString(date)
-//    }()
-    
-    
+
     let rocketName: String
     let flightNo: String
     let flightDate: String
@@ -53,7 +46,6 @@ class ListCellViewModel: ListCellViewModelInterface {
 
     init(listCellModel: ListCellModelProtocol) {
         self.listCellModel = listCellModel
-        
         self.rocketName = self.listCellModel.rocket_name
         self.flightNo = String(self.listCellModel.flight_number)
         // This is a hack, with more time I would have implemented the date formatter
@@ -84,7 +76,4 @@ class ListCellViewModel: ListCellViewModelInterface {
         }
         return launchSite
     }
-    
-
-    
 }
