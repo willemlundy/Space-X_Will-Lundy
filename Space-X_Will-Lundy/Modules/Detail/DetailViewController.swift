@@ -11,6 +11,7 @@ import UIKit
 protocol DetailCoordinatorProtocol: class {
 }
 
+// This page was at the last minute, needs much more work
 class DetailViewController: UIViewController {
     // Delegates
     weak var delegateToCoordinator: DetailCoordinatorProtocol?
