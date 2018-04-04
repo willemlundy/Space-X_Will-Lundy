@@ -33,6 +33,7 @@
 		8914CDB720732AC800F1930A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8914CDB620732AC800F1930A /* APIManager.swift */; };
 		8914CDB92073390600F1930A /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8914CDB82073390600F1930A /* ListTableViewCell.xib */; };
 		8914CDBB2073AA8600F1930A /* ListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8914CDBA2073AA8600F1930A /* ListCellViewModel.swift */; };
+		8914CDBD2073D11900F1930A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8914CDBC2073D11900F1930A /* ViewController.swift */; };
 		89542A9020729DE3006D8120 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89542A8F20729DE3006D8120 /* AppDelegate.swift */; };
 		89542A9520729DE3006D8120 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89542A9320729DE3006D8120 /* Main.storyboard */; };
 		89542A9720729DE3006D8120 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89542A9620729DE3006D8120 /* Assets.xcassets */; };
@@ -90,6 +91,7 @@
 		8914CDB620732AC800F1930A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		8914CDB82073390600F1930A /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		8914CDBA2073AA8600F1930A /* ListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellViewModel.swift; sourceTree = "<group>"; };
+		8914CDBC2073D11900F1930A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		89542A8C20729DE3006D8120 /* Space-X_Will-Lundy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space-X_Will-Lundy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		89542A8F20729DE3006D8120 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89542A9420729DE3006D8120 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		8914CD8C207322ED00F1930A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8914CDBC2073D11900F1930A /* ViewController.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				8914CD862073225000F1930A /* Coordinator.swift in Sources */,
 				8914CD882073227600F1930A /* ApplicationCoordinator.swift in Sources */,
 				8914CDA2207326D300F1930A /* SpaceXLaunches.swift in Sources */,
+				8914CDBD2073D11900F1930A /* ViewController.swift in Sources */,
 				8914CDA82073280300F1930A /* DetailViewModel.swift in Sources */,
 				8914CDB520732AA800F1930A /* HTTPClient.swift in Sources */,
 				8914CD91207323CF00F1930A /* Configurator.swift in Sources */,

@@ -20,6 +20,7 @@ class ApplicationCoordinator: Coordinator {
     }
     
     func start() {
+        print("Starting Application Coordinator")
         self.window.rootViewController = rootViewController
         self.launchCoordinator.start()
         self.window.makeKeyAndVisible()

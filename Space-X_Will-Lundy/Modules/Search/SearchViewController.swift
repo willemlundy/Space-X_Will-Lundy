@@ -19,6 +19,13 @@ class SearchViewController: UIViewController {
     
     var viewModel: SearchViewModelInterface!
     
+    @IBOutlet weak var searchYearLabel: UILabel!
+    @IBOutlet weak var searchYearTextField: UITextField!
+    @IBOutlet weak var beginDateLabel: UILabel!
+    @IBOutlet weak var beginDateTextField: UITextField!
+    @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var endDateTextField: UITextField!
+    
     public required init() {
         super.init(nibName: "Search", bundle: nil)
     }

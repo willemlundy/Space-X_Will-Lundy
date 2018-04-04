@@ -24,7 +24,7 @@ struct Launch: ListCellModelProtocol {
     // Given more time I would have built in more error checking on the structure of the json and the range of the values
     
     init(json: JSON) {
-        print(json)
+        //print(json)
         self.rocket_name = json["rocket"]["rocket_name"].stringValue
         self.flight_number = json["flight_number"].intValue
         self.launch_year = json["launch_year"].stringValue

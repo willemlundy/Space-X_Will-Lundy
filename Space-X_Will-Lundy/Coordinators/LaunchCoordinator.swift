@@ -26,6 +26,7 @@ class LaunchCoordinator: Coordinator {
     }
     
     func start() {
+        print("Starting Launch Coordinator")
         let searchVC = Configurator.configureSearchModuleXIB(presenter: self, searchModel: allLaunches)
         self.presenter.pushViewController(searchVC, animated: false)
         self.launchSearchViewController = searchVC
@@ -34,6 +35,7 @@ class LaunchCoordinator: Coordinator {
     }
     
     func loadLaunches() {
+        print("Loading Launches")
         manager.getLaunchStorage(launchSearch: .AllLaunches) { (launches, error) in
             
             guard error == nil else {
@@ -59,9 +61,8 @@ extension LaunchCoordinator: SearchCoordinatorProtocol {
         presenter.pushViewController(listVC, animated: true)
         
     }
-    
-    
 }
+
 extension LaunchCoordinator: ListCoordinatorProtocol {
     func launchListDidSelect(_ selectedLaunch: Launch) {
         
